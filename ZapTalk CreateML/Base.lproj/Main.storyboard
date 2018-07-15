@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZapTalk_CreateML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Gd-lU-v5e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="4cl-4c-nu6">
+                                <rect key="frame" x="67.666666666666686" y="701" width="240" height="56"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EtF-f2-dyc">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escolha uma imagem" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZT-OD-8FS">
+                                            <rect key="frame" x="-0.66666666666668561" y="0.0" width="240" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <nil key="backgroundColor"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="car-cc-kHS"/>
+                                    <constraint firstAttribute="width" constant="240" id="dia-5u-s4o"/>
+                                </constraints>
+                                <blurEffect style="extraLight"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taK-fQ-0k9">
+                                <rect key="frame" x="0.0" y="768" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uZE-ec-HMd"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem springLoaded="YES" systemItem="camera" id="sNb-Bl-QQo">
+                                        <inset key="landscapeImageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="pickImageToClassify:" destination="BYZ-38-t0r" id="Yem-Ud-rj0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3Gd-lU-v5e" secondAttribute="bottom" id="QC1-GE-S6X"/>
+                            <constraint firstItem="3Gd-lU-v5e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QJG-go-HZC"/>
+                            <constraint firstAttribute="bottom" secondItem="taK-fQ-0k9" secondAttribute="bottom" id="QjS-Wd-ZIm"/>
+                            <constraint firstItem="3Gd-lU-v5e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SRB-Hv-l2r"/>
+                            <constraint firstItem="taK-fQ-0k9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="T65-u4-fRM"/>
+                            <constraint firstItem="4cl-4c-nu6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eq5-Ia-JsQ"/>
+                            <constraint firstItem="taK-fQ-0k9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgR-cC-aiH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4cl-4c-nu6" secondAttribute="bottom" constant="55" id="vCl-6g-k2a"/>
+                            <constraint firstAttribute="trailing" secondItem="3Gd-lU-v5e" secondAttribute="trailing" id="yO8-pm-Fmt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationResult" destination="TZT-OD-8FS" id="v2q-bm-nJ3"/>
+                        <outlet property="imageToBeClassified" destination="3Gd-lU-v5e" id="ND3-Jt-rB2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+</document>
